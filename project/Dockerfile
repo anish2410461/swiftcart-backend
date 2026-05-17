@@ -10,4 +10,4 @@ RUN ./mvnw clean package -DskipTests
 
 EXPOSE 8081
 
-CMD ["java", "-jar", "target/project-0.0.1-SNAPSHOT.jar"]
+CMD ["java", "-jar", "target/Backend-0.0.1-SNAPSHOT.jar"]
