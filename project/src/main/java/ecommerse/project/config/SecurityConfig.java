@@ -51,12 +51,13 @@ public class SecurityConfig {
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration config = new CorsConfiguration();
 
-        // Add your exact Vercel URL here
-        config.setAllowedOrigins(List.of(
+        // 🚀 Accept local host ports, main production domain, and any dynamic Vercel previews
+        config.setAllowedOriginPatterns(List.of(
                 "http://localhost:5173",
                 "http://localhost:5174",
                 "http://localhost:5175",
-                "https://swiftcard-frontend.vercel.app" // Your Vercel production domain
+                "https://swiftcard-frontend.vercel.app",
+                "https://*.vercel.app"
         ));
 
         config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"));
